@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Términos de uso — Safe Space</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0d0d1a;--surface:#13132b;--surface2:#1a1a38;
+  --accent:#7c6ff7;--accent2:#a78bfa;--accent3:#c4b5fd;
+  --text:#e8e6ff;--muted:#8b88b3;--border:rgba(124,111,247,0.2);
+  --success:#6ee7b7;--danger:#f87171;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{
+  font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);
+  line-height:1.65;
+}
+body::before{
+  content:'';position:fixed;top:-30%;left:-20%;width:70%;height:70%;
+  background:radial-gradient(ellipse,rgba(124,111,247,0.1) 0%,transparent 70%);
+  pointer-events:none;z-index:0;
+}
+.wrap{max-width:720px;margin:0 auto;padding:1.8rem 1.5rem 5rem;position:relative;z-index:1;}
+.lang-switch{display:flex;justify-content:center;gap:.5rem;margin-bottom:1.8rem;}
+.lang-btn{
+  background:var(--surface2);border:1px solid var(--border);border-radius:20px;
+  padding:.4rem 1.1rem;font-size:.8rem;font-weight:600;color:var(--muted);
+  cursor:pointer;font-family:'DM Sans',sans-serif;transition:all .2s;
+}
+.lang-btn.active{background:var(--accent);color:white;border-color:var(--accent);}
+header{text-align:center;margin-bottom:2.5rem;}
+.logo{font-size:2.2rem;margin-bottom:.5rem;}
+h1{
+  font-family:'Syne',sans-serif;font-weight:800;font-size:1.6rem;
+  background:linear-gradient(135deg,var(--accent),var(--accent3));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+  margin-bottom:.4rem;
+}
+.subtitle{color:var(--muted);font-size:.9rem;}
+.updated{
+  display:inline-block;margin-top:.9rem;font-size:.75rem;color:var(--accent3);
+  background:var(--surface2);border:1px solid var(--border);border-radius:20px;
+  padding:.3rem .9rem;
+}
+.intro{
+  background:var(--surface);border:1px solid var(--border);border-radius:16px;
+  padding:1.2rem 1.3rem;margin-bottom:2rem;font-size:.92rem;color:var(--text);
+}
+section{margin-bottom:2rem;}
+h2{
+  font-family:'Syne',sans-serif;font-weight:700;font-size:1.05rem;
+  color:var(--text);margin-bottom:.8rem;display:flex;align-items:center;gap:.5rem;
+}
+h3{
+  font-family:'Syne',sans-serif;font-weight:600;font-size:.92rem;
+  color:var(--accent3);margin:1rem 0 .4rem;
+}
+p{font-size:.9rem;color:var(--muted);margin-bottom:.7rem;}
+ul{margin:.5rem 0 .8rem 1.1rem;}
+li{font-size:.9rem;color:var(--muted);margin-bottom:.4rem;}
+strong{color:var(--text);font-weight:600;}
+.card{
+  background:var(--surface);border:1px solid var(--border);border-radius:14px;
+  padding:1rem 1.2rem;margin:.8rem 0;
+}
+.badge-share{
+  display:inline-flex;align-items:center;gap:.3rem;font-size:.68rem;font-weight:600;
+  background:rgba(167,139,250,0.12);color:var(--accent3);border:1px solid rgba(167,139,250,0.3);
+  border-radius:20px;padding:.15rem .6rem;margin-left:.4rem;vertical-align:middle;
+}
+table{width:100%;border-collapse:collapse;margin:.8rem 0;font-size:.85rem;}
+th{
+  text-align:left;color:var(--accent3);font-weight:600;padding:.5rem .6rem;
+  border-bottom:1px solid var(--border);font-size:.78rem;
+}
+td{padding:.6rem;border-bottom:1px solid var(--border);color:var(--muted);vertical-align:top;}
+td:first-child{color:var(--text);font-weight:500;white-space:nowrap;}
+.crisis-box{
+  background:rgba(248,113,113,0.08);border:1px solid rgba(248,113,113,0.25);
+  border-radius:14px;padding:1rem 1.2rem;margin:.8rem 0;
+}
+.crisis-box p{color:var(--text);}
+footer{
+  text-align:center;margin-top:3rem;padding-top:1.5rem;border-top:1px solid var(--border);
+  font-size:.78rem;color:var(--muted);
+}
+a{color:var(--accent3);}
+[data-lang]{display:none;}
+[data-lang].active-lang{display:block;}
+@media(max-width:480px){
+  .wrap{padding:1.4rem 1.1rem 4rem;}
+  h1{font-size:1.35rem;}
+}
+@media(max-width:480px){table{font-size:.78rem;}th,td{padding:.45rem .4rem !important;word-break:break-word;hyphens:auto;}}
+.fill{background:rgba(255,190,60,.16);border:1px dashed #f0b545;border-radius:4px;padding:0 .3em;color:#f5c66b;font-weight:600;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="lang-switch">
+    <button class="lang-btn" data-setlang="es" onclick="setLang('es')">🇪🇸 ES</button>
+    <button class="lang-btn" data-setlang="en" onclick="setLang('en')">🇬🇧 EN</button>
+    <button class="lang-btn" data-setlang="fr" onclick="setLang('fr')">🇫🇷 FR</button>
+  </div>
+
+  <div data-lang="es">
+    <header>
+      <div class="logo">📄</div>
+      <h1>Términos de uso</h1>
+      <div class="subtitle">Safe Space — Tu lugar seguro, siempre.</div>
+      <div class="updated">Última actualización: octubre de 2026</div>
+    </header>
+
+    <div class="intro">Estos términos son las reglas para usar Safe Space, escritas en lenguaje sencillo. <strong>Al usar la app aceptas estos términos</strong>; si no estás de acuerdo, no la uses. Cómo tratamos tus datos se explica aparte en el <a href="https://ian20256.github.io/AvisoPrivacidadSafeSpace/">Aviso de privacidad</a>.</div>
+
+    <section>
+      <h2>👤 Quién ofrece Safe Space</h2>
+      <div class="card"><p style="margin-bottom:0;">Safe Space es desarrollado y operado por <strong>Jaime Amaro</strong> ("nosotros"), desde México. Puedes escribirnos a <a href="mailto:azilx31593@gmail.com">azilx31593@gmail.com</a> o usar la opción de comentarios dentro de la app.</p></div>
+    </section>
+
+    <section>
+      <h2>🩺 No es atención médica ni un servicio de emergencias</h2>
+      <div class="crisis-box"><p>Safe Space es una herramienta de apoyo emocional y bienestar. <strong>No es un dispositivo médico</strong>, no da diagnósticos ni tratamientos y no sustituye a un médico, psicólogo o psiquiatra.</p><p><strong>No es un servicio de emergencias.</strong> Nadie vigila los chats en tiempo real. Si estás en peligro o piensas hacerte daño, llama al <strong>911</strong> o a la <strong>Línea de la Vida (800 911 2000)</strong>, o a los servicios de emergencia de tu país.</p><p style="margin-bottom:0;">La detección de crisis de la app es automática y puede fallar: puede no reconocer un mensaje de riesgo, o marcar uno que no lo es.</p></div>
+    </section>
+
+    <section>
+      <h2>🤖 El asistente de inteligencia artificial</h2>
+      <ul><li>Las respuestas del asistente las genera automáticamente un proveedor de inteligencia artificial (Google Gemini, Cerebras o Mistral). Nadie de nuestro lado las escribe ni las revisa antes de que las veas.</li><li>Pueden ser <strong>incorrectas, incompletas o inapropiadas</strong>. No tomes decisiones médicas, legales, financieras ni de seguridad basándote en ellas.</li><li>Si una respuesta te parece ofensiva o dañina, repórtala con el botón <strong>⚑</strong> junto al mensaje.</li><li>El chat con IA solo se usa si das tu consentimiento. Si no lo das, o si el servicio de IA no está disponible, la app responde con mensajes preparados.</li></ul>
+    </section>
+
+    <section>
+      <h2>🎂 Edad</h2>
+      <ul><li><strong>18 años o más:</strong> puedes usar todas las funciones.</li><li><strong>13 a 17 años:</strong> para usar el chat con IA y el Mensaje en la Botella, tu madre, padre o tutor debe saber que usas Safe Space y estar de acuerdo.</li><li><strong>Menos de 13 años:</strong> puedes usar la app en modo sencillo, sin IA y sin Mensaje en la Botella.</li></ul><p style="margin-bottom:0;">Las madres, padres y tutores son responsables de supervisar el uso que hacen los menores de la app. Si eres menor de edad, pide permiso antes de comprar SafeSpace+.</p>
+    </section>
+
+    <section>
+      <h2>💾 Tu cuenta y tus datos</h2>
+      <ul><li>Tu cuenta, tu diario y casi todo lo demás se guardan <strong>solo en tu dispositivo</strong>. No tenemos una copia.</li><li>Por eso <strong>no podemos recuperar</strong> tu contraseña, tu PIN ni tus datos si los olvidas o los pierdes (por ejemplo, si borras la app o los datos del navegador, o cambias de teléfono). Haz copias de seguridad desde Ajustes.</li><li>Cuida tu contraseña, tu PIN y tus archivos de respaldo: el respaldo contiene tu diario.</li><li>Lo que sí sale de tu dispositivo, y para qué, se explica en el <a href="https://ian20256.github.io/AvisoPrivacidadSafeSpace/">Aviso de privacidad</a>.</li></ul>
+    </section>
+
+    <section>
+      <h2>🌊 Reglas de convivencia</h2>
+      <p>Al usar Safe Space te comprometes a <strong>no</strong>:</p><ul><li>acosar, amenazar, insultar o humillar a nadie;</li><li>publicar contenido sexual, violento, discriminatorio o ilegal;</li><li>compartir datos personales tuyos o de otras personas (teléfonos, direcciones, redes sociales, nombres completos);</li><li>animar a alguien a hacerse daño;</li><li>enviar spam, publicidad o enlaces;</li><li>intentar romper, saturar o engañar a la app o a nuestros servidores, saltarte sus límites o activar SafeSpace+ sin pagarlo.</li></ul><p style="margin-bottom:0;">Los mensajes en la botella son <strong>públicos y anónimos</strong>. Podemos borrar los que rompan estas reglas y quitar el acceso a las funciones comunitarias a quien las rompa.</p>
+    </section>
+
+    <section>
+      <h2>💛 SafeSpace+</h2>
+      <ul><li>SafeSpace+ es <strong>opcional</strong>. Lo gratuito de Safe Space (chat, diario, detección de crisis y meditaciones básicas) sigue siendo gratis y sin límites, tengas o no SafeSpace+.</li><li>Es un <strong>pago único</strong> por el periodo que elijas (1, 3, 6 o 12 meses) y <strong>no se renueva automáticamente</strong>: al terminar, los beneficios se desactivan y puedes volver a comprarlo si quieres. Si compras antes de que venza, el tiempo nuevo se suma al que te quedaba.</li><li>El cobro lo hace <strong>Google Play</strong> con tu cuenta de Google, y te muestra el precio final antes de pagar. Los reembolsos se gestionan según las políticas de Google Play; también puedes escribirnos.</li><li><strong>Prueba gratis:</strong> 7 días, una vez por perfil, sin pago ni tarjeta. No se convierte en una compra.</li><li>Verificamos cada compra con Google. Si Google indica que una compra no es válida o fue reembolsada, los beneficios se desactivan.</li><li>Si reinstalas la app o cambias de teléfono, usa <strong>Restaurar compra</strong> en Ajustes con la misma cuenta de Google.</li><li>Los beneficios pueden cambiar con el tiempo. Si quitamos un beneficio importante mientras tienes tiempo pagado, puedes pedirnos un reembolso proporcional.</li></ul><p style="margin-bottom:0;">Nada de esto limita tus derechos bajo la Ley Federal de Protección al Consumidor.</p>
+    </section>
+
+    <section>
+      <h2>©️ Contenido y propiedad</h2>
+      <ul><li>Los textos, meditaciones, diseños, ilustraciones y el código de Safe Space son nuestros o los usamos con permiso. No puedes copiarlos, venderlos ni publicarlos como tuyos.</li><li><strong>Lo que tú escribes es tuyo.</strong> Al enviar un mensaje en la botella nos das permiso de guardarlo y mostrarlo de forma anónima a otras personas de la comunidad mientras dure (7 días).</li></ul>
+    </section>
+
+    <section>
+      <h2>⚙️ Disponibilidad y cambios</h2>
+      <p style="margin-bottom:0;">Hacemos lo posible para que Safe Space funcione bien, pero se ofrece <strong>tal cual</strong>: puede tener errores o interrupciones, y algunas funciones dependen de servicios de terceros (Google, Cloudflare y los proveedores de IA). Podemos mejorar, cambiar o retirar funciones.</p>
+    </section>
+
+    <section>
+      <h2>⚖️ Responsabilidad</h2>
+      <p>En la medida en que la ley lo permita, no somos responsables de:</p><ul><li>daños por decisiones tomadas con base en respuestas del asistente;</li><li>la pérdida de datos guardados en tu dispositivo;</li><li>fallas o interrupciones de servicios de terceros;</li><li>el uso que otras personas den a los mensajes públicos de la botella.</li></ul><p style="margin-bottom:0;">Esto no limita nuestra responsabilidad en los casos en que la ley no permite limitarla, ni tus derechos como consumidor.</p>
+    </section>
+
+    <section>
+      <h2>🚪 Dejar de usar Safe Space</h2>
+      <p style="margin-bottom:0;">Puedes dejar de usar la app cuando quieras y borrar todo desde <strong>Ajustes → Eliminar mis datos</strong>. Podemos limitar el acceso a la app o a sus funciones comunitarias a quien rompa estos términos.</p>
+    </section>
+
+    <section>
+      <h2>🔄 Cambios a estos términos</h2>
+      <p style="margin-bottom:0;">Si cambiamos estos términos, actualizaremos la fecha de arriba y, si el cambio es importante, te avisaremos dentro de la app. Si sigues usando Safe Space después, aceptas la nueva versión.</p>
+    </section>
+
+    <section>
+      <h2>🇲🇽 Ley aplicable</h2>
+      <p style="margin-bottom:0;">Estos términos se rigen por las leyes de los Estados Unidos Mexicanos. Si tienes una queja como consumidor puedes acudir a la Procuraduría Federal del Consumidor (PROFECO); antes, escríbenos: casi siempre se resuelve más rápido así.</p>
+    </section>
+
+    <section>
+      <h2>✉️ ¿Preguntas?</h2>
+      <p style="margin-bottom:0;">Escríbenos a <a href="mailto:azilx31593@gmail.com">azilx31593@gmail.com</a> o usa la opción de comentarios dentro de la app.</p>
+    </section>
+
+    <footer>Safe Space — Términos de uso · <a href="https://ian20256.github.io/AvisoPrivacidadSafeSpace/">Aviso de privacidad</a></footer>
+  </div>
+
+  <div data-lang="en">
+    <header>
+      <div class="logo">📄</div>
+      <h1>Terms of Use</h1>
+      <div class="subtitle">Safe Space — Your safe place, always.</div>
+      <div class="updated">Last updated: October 2026</div>
+    </header>
+
+    <div class="intro">These terms are the rules for using Safe Space, in plain language. <strong>By using the app you accept these terms</strong>; if you don't agree, please don't use it. How we handle your data is explained separately in the <a href="https://ian20256.github.io/AvisoPrivacidadSafeSpace/">Privacy Notice</a>.</div>
+
+    <section>
+      <h2>👤 Who provides Safe Space</h2>
+      <div class="card"><p style="margin-bottom:0;">Safe Space is developed and operated by <strong>Jaime Amaro</strong> ("we"), from Mexico. You can write to us at <a href="mailto:azilx31593@gmail.com">azilx31593@gmail.com</a> or use the feedback option inside the app.</p></div>
+    </section>
+
+    <section>
+      <h2>🩺 Not medical care and not an emergency service</h2>
+      <div class="crisis-box"><p>Safe Space is an emotional support and wellbeing tool. <strong>It is not a medical device</strong>, does not diagnose or treat anything, and does not replace a doctor, psychologist or psychiatrist.</p><p><strong>It is not an emergency service.</strong> No one watches the chats in real time. If you are in danger or thinking about hurting yourself, call <strong>911</strong> or the <strong>Línea de la Vida (800 911 2000)</strong> in Mexico, or your local emergency services.</p><p style="margin-bottom:0;">The app's crisis detection is automatic and can fail: it may miss a risky message, or flag one that isn't.</p></div>
+    </section>
+
+    <section>
+      <h2>🤖 The AI assistant</h2>
+      <ul><li>The assistant's replies are generated automatically by an artificial intelligence provider (Google Gemini, Cerebras or Mistral). No one on our side writes or reviews them before you see them.</li><li>They may be <strong>wrong, incomplete or inappropriate</strong>. Don't make medical, legal, financial or safety decisions based on them.</li><li>If a reply seems offensive or harmful, report it with the <strong>⚑</strong> button next to the message.</li><li>The AI chat is only used if you give your consent. If you don't, or if the AI service is unavailable, the app answers with ready-made messages.</li></ul>
+    </section>
+
+    <section>
+      <h2>🎂 Age</h2>
+      <ul><li><strong>18 or older:</strong> you can use every feature.</li><li><strong>13 to 17:</strong> to use the AI chat and Message in a Bottle, a parent or guardian must know you use Safe Space and agree to it.</li><li><strong>Under 13:</strong> you can use the app in simple mode, without AI and without Message in a Bottle.</li></ul><p style="margin-bottom:0;">Parents and guardians are responsible for supervising minors' use of the app. If you are a minor, ask for permission before buying SafeSpace+.</p>
+    </section>
+
+    <section>
+      <h2>💾 Your account and your data</h2>
+      <ul><li>Your account, your diary and almost everything else are stored <strong>only on your device</strong>. We don't have a copy.</li><li>That's why we <strong>can't recover</strong> your password, your PIN or your data if you forget or lose them (for example, if you delete the app or your browser data, or change phones). Make backups from Settings.</li><li>Keep your password, PIN and backup files safe: a backup contains your diary.</li><li>What does leave your device, and why, is explained in the <a href="https://ian20256.github.io/AvisoPrivacidadSafeSpace/">Privacy Notice</a>.</li></ul>
+    </section>
+
+    <section>
+      <h2>🌊 Community rules</h2>
+      <p>By using Safe Space you agree <strong>not</strong> to:</p><ul><li>harass, threaten, insult or humiliate anyone;</li><li>post sexual, violent, discriminatory or illegal content;</li><li>share personal details about yourself or others (phone numbers, addresses, social media, full names);</li><li>encourage anyone to hurt themselves;</li><li>send spam, advertising or links;</li><li>try to break, overload or trick the app or our servers, get around its limits, or unlock SafeSpace+ without paying.</li></ul><p style="margin-bottom:0;">Bottle messages are <strong>public and anonymous</strong>. We may delete messages that break these rules and remove access to community features for anyone who breaks them.</p>
+    </section>
+
+    <section>
+      <h2>💛 SafeSpace+</h2>
+      <ul><li>SafeSpace+ is <strong>optional</strong>. Safe Space's free features (chat, diary, crisis detection and basic meditations) stay free and unlimited, with or without SafeSpace+.</li><li>It is a <strong>one-time payment</strong> for the period you choose (1, 3, 6 or 12 months) and <strong>does not renew automatically</strong>: when it ends, the benefits turn off and you can buy it again if you want. If you buy before it expires, the new time is added to what you had left.</li><li>Payment is handled by <strong>Google Play</strong> with your Google account, which shows you the final price before you pay. Refunds follow Google Play's policies; you can also write to us.</li><li><strong>Free trial:</strong> 7 days, once per profile, with no payment or card. It never turns into a purchase.</li><li>We verify every purchase with Google. If Google reports that a purchase isn't valid or was refunded, the benefits are turned off.</li><li>If you reinstall the app or change phones, use <strong>Restore purchase</strong> in Settings with the same Google account.</li><li>Benefits may change over time. If we remove an important benefit while you have paid time left, you can ask us for a prorated refund.</li></ul><p style="margin-bottom:0;">None of this limits your rights under Mexico's Federal Consumer Protection Law.</p>
+    </section>
+
+    <section>
+      <h2>©️ Content and ownership</h2>
+      <ul><li>Safe Space's texts, meditations, designs, illustrations and code belong to us or are used with permission. You may not copy, sell or publish them as your own.</li><li><strong>What you write is yours.</strong> When you send a bottle message, you give us permission to store it and show it anonymously to others in the community for as long as it lasts (7 days).</li></ul>
+    </section>
+
+    <section>
+      <h2>⚙️ Availability and changes</h2>
+      <p style="margin-bottom:0;">We do our best to keep Safe Space working well, but it is provided <strong>as is</strong>: it may have bugs or interruptions, and some features depend on third-party services (Google, Cloudflare and the AI providers). We may improve, change or remove features.</p>
+    </section>
+
+    <section>
+      <h2>⚖️ Liability</h2>
+      <p>To the extent the law allows, we are not responsible for:</p><ul><li>harm from decisions made based on the assistant's replies;</li><li>loss of data stored on your device;</li><li>failures or interruptions of third-party services;</li><li>how other people use public bottle messages.</li></ul><p style="margin-bottom:0;">This does not limit our liability where the law does not allow it to be limited, nor your rights as a consumer.</p>
+    </section>
+
+    <section>
+      <h2>🚪 Stopping using Safe Space</h2>
+      <p style="margin-bottom:0;">You can stop using the app anytime and erase everything from <strong>Settings → Delete my data</strong>. We may limit access to the app or its community features for anyone who breaks these terms.</p>
+    </section>
+
+    <section>
+      <h2>🔄 Changes to these terms</h2>
+      <p style="margin-bottom:0;">If we change these terms, we'll update the date above and, if the change is important, let you know inside the app. If you keep using Safe Space afterwards, you accept the new version.</p>
+    </section>
+
+    <section>
+      <h2>🇲🇽 Governing law</h2>
+      <p style="margin-bottom:0;">These terms are governed by the laws of the United Mexican States. If you have a consumer complaint you can contact Mexico's consumer protection agency (PROFECO); please write to us first, as it's usually faster.</p>
+    </section>
+
+    <section>
+      <h2>✉️ Questions?</h2>
+      <p style="margin-bottom:0;">Write to <a href="mailto:azilx31593@gmail.com">azilx31593@gmail.com</a> or use the feedback option inside the app.</p>
+    </section>
+
+    <footer>Safe Space — Terms of Use · <a href="https://ian20256.github.io/AvisoPrivacidadSafeSpace/">Privacy Notice</a></footer>
+  </div>
+
+  <div data-lang="fr">
+    <header>
+      <div class="logo">📄</div>
+      <h1>Conditions d'utilisation</h1>
+      <div class="subtitle">Safe Space — Ton espace sûr, toujours.</div>
+      <div class="updated">Dernière mise à jour : octobre 2026</div>
+    </header>
+
+    <div class="intro">Ces conditions sont les règles pour utiliser Safe Space, écrites simplement. <strong>En utilisant l'application, tu acceptes ces conditions</strong> ; si tu n'es pas d'accord, ne l'utilise pas. La façon dont nous traitons tes données est expliquée à part dans l'<a href="https://ian20256.github.io/AvisoPrivacidadSafeSpace/">Avis de confidentialité</a>.</div>
+
+    <section>
+      <h2>👤 Qui propose Safe Space</h2>
+      <div class="card"><p style="margin-bottom:0;">Safe Space est développé et exploité par <strong>Jaime Amaro</strong> (« nous »), depuis le Mexique. Tu peux nous écrire à <a href="mailto:azilx31593@gmail.com">azilx31593@gmail.com</a> ou utiliser l'option de retour dans l'application.</p></div>
+    </section>
+
+    <section>
+      <h2>🩺 Ce n'est ni un soin médical ni un service d'urgence</h2>
+      <div class="crisis-box"><p>Safe Space est un outil de soutien émotionnel et de bien-être. <strong>Ce n'est pas un dispositif médical</strong> : il ne pose pas de diagnostic, ne soigne rien et ne remplace pas un médecin, un psychologue ou un psychiatre.</p><p><strong>Ce n'est pas un service d'urgence.</strong> Personne ne surveille les discussions en temps réel. Si tu es en danger ou penses te faire du mal, appelle le <strong>911</strong> ou la <strong>Línea de la Vida (800 911 2000)</strong> au Mexique, ou les services d'urgence de ton pays.</p><p style="margin-bottom:0;">La détection de crise de l'application est automatique et peut se tromper : elle peut manquer un message à risque, ou en signaler un qui ne l'est pas.</p></div>
+    </section>
+
+    <section>
+      <h2>🤖 L'assistant d'intelligence artificielle</h2>
+      <ul><li>Les réponses de l'assistant sont générées automatiquement par un fournisseur d'intelligence artificielle (Google Gemini, Cerebras ou Mistral). Personne de notre côté ne les écrit ni ne les relit avant que tu les voies.</li><li>Elles peuvent être <strong>fausses, incomplètes ou inappropriées</strong>. Ne prends pas de décisions médicales, juridiques, financières ou de sécurité en te basant sur elles.</li><li>Si une réponse te semble offensante ou nuisible, signale-la avec le bouton <strong>⚑</strong> à côté du message.</li><li>Le chat avec IA n'est utilisé que si tu donnes ton consentement. Sinon, ou si le service d'IA n'est pas disponible, l'application répond avec des messages préparés.</li></ul>
+    </section>
+
+    <section>
+      <h2>🎂 Âge</h2>
+      <ul><li><strong>18 ans ou plus :</strong> tu peux utiliser toutes les fonctions.</li><li><strong>13 à 17 ans :</strong> pour utiliser le chat avec IA et le Message dans une Bouteille, un parent ou tuteur doit savoir que tu utilises Safe Space et être d'accord.</li><li><strong>Moins de 13 ans :</strong> tu peux utiliser l'application en mode simple, sans IA et sans Message dans une Bouteille.</li></ul><p style="margin-bottom:0;">Les parents et tuteurs sont responsables de superviser l'usage que les mineurs font de l'application. Si tu es mineur(e), demande la permission avant d'acheter SafeSpace+.</p>
+    </section>
+
+    <section>
+      <h2>💾 Ton compte et tes données</h2>
+      <ul><li>Ton compte, ton journal et presque tout le reste sont enregistrés <strong>uniquement sur ton appareil</strong>. Nous n'en avons pas de copie.</li><li>C'est pourquoi nous <strong>ne pouvons pas récupérer</strong> ton mot de passe, ton PIN ni tes données si tu les oublies ou les perds (par exemple si tu supprimes l'application ou les données du navigateur, ou si tu changes de téléphone). Fais des sauvegardes depuis Paramètres.</li><li>Protège ton mot de passe, ton PIN et tes fichiers de sauvegarde : une sauvegarde contient ton journal.</li><li>Ce qui sort de ton appareil, et pourquoi, est expliqué dans l'<a href="https://ian20256.github.io/AvisoPrivacidadSafeSpace/">Avis de confidentialité</a>.</li></ul>
+    </section>
+
+    <section>
+      <h2>🌊 Règles de la communauté</h2>
+      <p>En utilisant Safe Space, tu t'engages à <strong>ne pas</strong> :</p><ul><li>harceler, menacer, insulter ou humilier qui que ce soit ;</li><li>publier du contenu sexuel, violent, discriminatoire ou illégal ;</li><li>partager des données personnelles sur toi ou sur d'autres (téléphones, adresses, réseaux sociaux, noms complets) ;</li><li>encourager quelqu'un à se faire du mal ;</li><li>envoyer du spam, de la publicité ou des liens ;</li><li>essayer de casser, surcharger ou tromper l'application ou nos serveurs, contourner ses limites, ou débloquer SafeSpace+ sans payer.</li></ul><p style="margin-bottom:0;">Les messages en bouteille sont <strong>publics et anonymes</strong>. Nous pouvons supprimer ceux qui enfreignent ces règles et retirer l'accès aux fonctions communautaires à qui les enfreint.</p>
+    </section>
+
+    <section>
+      <h2>💛 SafeSpace+</h2>
+      <ul><li>SafeSpace+ est <strong>facultatif</strong>. Ce qui est gratuit dans Safe Space (chat, journal, détection de crise et méditations de base) reste gratuit et sans limite, avec ou sans SafeSpace+.</li><li>C'est un <strong>paiement unique</strong> pour la période choisie (1, 3, 6 ou 12 mois) et il <strong>ne se renouvelle pas automatiquement</strong> : à la fin, les avantages se désactivent et tu peux le racheter si tu veux. Si tu achètes avant l'expiration, le nouveau temps s'ajoute à celui qui te restait.</li><li>Le paiement est géré par <strong>Google Play</strong> avec ton compte Google, qui t'affiche le prix final avant de payer. Les remboursements suivent les règles de Google Play ; tu peux aussi nous écrire.</li><li><strong>Essai gratuit :</strong> 7 jours, une fois par profil, sans paiement ni carte. Il ne se transforme jamais en achat.</li><li>Nous vérifions chaque achat auprès de Google. Si Google indique qu'un achat n'est pas valide ou a été remboursé, les avantages se désactivent.</li><li>Si tu réinstalles l'application ou changes de téléphone, utilise <strong>Restaurer l'achat</strong> dans Paramètres avec le même compte Google.</li><li>Les avantages peuvent évoluer. Si nous retirons un avantage important alors qu'il te reste du temps payé, tu peux nous demander un remboursement au prorata.</li></ul><p style="margin-bottom:0;">Rien de tout cela ne limite tes droits selon la loi fédérale mexicaine de protection des consommateurs.</p>
+    </section>
+
+    <section>
+      <h2>©️ Contenu et propriété</h2>
+      <ul><li>Les textes, méditations, designs, illustrations et le code de Safe Space nous appartiennent ou sont utilisés avec autorisation. Tu ne peux pas les copier, les vendre ni les publier comme les tiens.</li><li><strong>Ce que tu écris t'appartient.</strong> En envoyant un message en bouteille, tu nous autorises à l'enregistrer et à le montrer anonymement aux autres membres de la communauté pendant sa durée de vie (7 jours).</li></ul>
+    </section>
+
+    <section>
+      <h2>⚙️ Disponibilité et changements</h2>
+      <p style="margin-bottom:0;">Nous faisons de notre mieux pour que Safe Space fonctionne bien, mais il est fourni <strong>tel quel</strong> : il peut avoir des erreurs ou des interruptions, et certaines fonctions dépendent de services tiers (Google, Cloudflare et les fournisseurs d'IA). Nous pouvons améliorer, modifier ou retirer des fonctions.</p>
+    </section>
+
+    <section>
+      <h2>⚖️ Responsabilité</h2>
+      <p>Dans la mesure permise par la loi, nous ne sommes pas responsables :</p><ul><li>des dommages liés à des décisions prises à partir des réponses de l'assistant ;</li><li>de la perte de données enregistrées sur ton appareil ;</li><li>des pannes ou interruptions de services tiers ;</li><li>de l'usage que d'autres personnes font des messages publics en bouteille.</li></ul><p style="margin-bottom:0;">Cela ne limite pas notre responsabilité dans les cas où la loi ne permet pas de la limiter, ni tes droits de consommateur.</p>
+    </section>
+
+    <section>
+      <h2>🚪 Arrêter d'utiliser Safe Space</h2>
+      <p style="margin-bottom:0;">Tu peux arrêter d'utiliser l'application quand tu veux et tout effacer depuis <strong>Paramètres → Supprimer mes données</strong>. Nous pouvons limiter l'accès à l'application ou à ses fonctions communautaires à qui enfreint ces conditions.</p>
+    </section>
+
+    <section>
+      <h2>🔄 Modifications de ces conditions</h2>
+      <p style="margin-bottom:0;">Si nous modifions ces conditions, nous mettrons à jour la date ci-dessus et, si le changement est important, nous te préviendrons dans l'application. Si tu continues à utiliser Safe Space ensuite, tu acceptes la nouvelle version.</p>
+    </section>
+
+    <section>
+      <h2>🇲🇽 Loi applicable</h2>
+      <p style="margin-bottom:0;">Ces conditions sont régies par les lois des États-Unis mexicains. Si tu as une réclamation de consommateur, tu peux t'adresser à l'agence mexicaine de protection des consommateurs (PROFECO) ; écris-nous d'abord, c'est généralement plus rapide.</p>
+    </section>
+
+    <section>
+      <h2>✉️ Des questions ?</h2>
+      <p style="margin-bottom:0;">Écris à <a href="mailto:azilx31593@gmail.com">azilx31593@gmail.com</a> ou utilise l'option de retour dans l'application.</p>
+    </section>
+
+    <footer>Safe Space — Conditions d'utilisation · <a href="https://ian20256.github.io/AvisoPrivacidadSafeSpace/">Avis de confidentialité</a></footer>
+  </div>
+
+</div>
+<script>
+function setLang(lang){
+  document.querySelectorAll('[data-lang]').forEach(function(el){
+    el.classList.toggle('active-lang', el.getAttribute('data-lang') === lang);
+  });
+  document.querySelectorAll('.lang-btn').forEach(function(btn){
+    btn.classList.toggle('active', btn.getAttribute('data-setlang') === lang);
+  });
+  document.documentElement.setAttribute('lang', lang);
+  try{ localStorage.setItem('ss_terms_lang', lang); }catch(e){}
+}
+(function(){
+  let initial = 'es';
+  try{
+    const saved = localStorage.getItem('ss_terms_lang');
+    if(saved) initial = saved;
+    else{
+      const nav = (navigator.language || 'es').slice(0,2);
+      if(['es','en','fr'].includes(nav)) initial = nav;
+    }
+  }catch(e){}
+  setLang(initial);
+})();
+</script>
+
+</body>
+</html>
